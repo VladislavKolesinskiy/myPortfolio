@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Fira Sans Condensed;
+}
+body {
+    background: #1f242d;
+    color: #fff;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    
+}
+.logo {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+.navbar a {
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+.navbar a:hover {
+    color: #0ef;
+}
+.navbar a.active {
+    color: #0ef;
+}
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+.home-content {
+    max-width: 600px;
+}
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease  forwards;
+    animation-delay: .7s;
+}
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 30px;
+    animation: slideTop 1s ease  forwards;
+    animation-delay: .7s;
+}
+.home-content h3 span {
+    color: #0ef;
+}
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    animation: slideRight 1s ease  forwards;
+    opacity: 0;
+    animation-delay: 1s;
+}
+.home-content p {
+    font-size: 16px;
+    animation: slideLeft 1s ease  forwards;
+    opacity: 0;
+    animation-delay: 1s;
+}
+.home-img img {
+    max-width: 1550px;
+    margin-right: -20px;
+    animation: zoomIn 1s ease  forwards, floatImage 4s ease-in-out infinite;
+    opacity: 0;
+    animation-delay: 2s, 3s;
+}
+.social-media {
+    display: flex;
+}
+.social-media a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 20px;
+    color: #0ef;
+    margin: 30px 15px 30px 0;
+    transition: .5s ease;
+    animation: slideLeft 1s ease  forwards;
+    opacity: 0;
+    animation-delay: calc(.2s *var(--i));
+}
+.social-media a:hover {
+    background: #0ef;
+    color: #1f242d;
+    box-shadow: 0 0 20px #0ef;
+}
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    box-shadow: 0 0 10px #0ef;
+    font-size: 16px;
+    color: #1f242d;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    animation: slideTop 1s ease  forwards;
+    opacity: 0;
+    animation-delay: 2s;
+}
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-24px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.contacts {
+        position: relative;
+        width: 100%;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 70px 10% 0;
+        display: flex;
+        flex-direction: column;
+}
+.contactsTxt {
+    animation: zoomIn 5s ease  forwards, floatImage 4s ease-in-out infinite;
+    font-size: 100px;
+    color: #0ef;
+    text-shadow: 0 0 20px #0ef;
+}
+.constructContacts {
+    margin-top: 100px;
+    display: flex;
+}
+.constructContacts a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 150px;
+    height: 150px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 100px;
+    color: #0ef;
+    margin: 30px 30px 30px 0;
+    transition: .5s ease;
+    animation: slideLeft 1s ease  forwards;
+    opacity: 0;
+    animation-delay: calc(.2s *var(--i));
+}
+.discord:hover {
+    background: rgb(0, 60, 255);
+    color: #fff;
+    border: solid rgb(65, 71, 255) 2px;
+    box-shadow: 0 0 20px rgb(0, 94, 255);
+}
+.github:hover {
+    background: rgb(27, 27, 27);
+    color: #fff;
+    border: solid rgb(21, 21, 21) 2px;
+    box-shadow: 0 0 20px rgb(37, 37, 38);
+}
+.telegram:hover {
+    background: #0ef;
+    color: #fff;
+    box-shadow: 0 0 20px #0ef;
+}
+.skills {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 10% 0;
+    display: flex;
+    flex-direction: column;
+}
+.skillsTxt {
+animation: zoomIn 5s ease  forwards, floatImage 4s ease-in-out infinite;
+font-size: 100px;
+color: #0ef;
+text-shadow: 0 0 20px #0ef;
+}
+.constructSkillsLine1 {
+margin-top: 100px;
+display: flex;
+}
+.constructSkillsLine2 {
+    margin-top: 50px;
+    display: flex;
+}
+#constSkills span {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: row;
+width: 150px;
+height: 150px;
+background: transparent;
+border: 2px solid #0ef;
+border-radius: 50%;
+text-decoration: none;
+font-size: 100px;
+color: #0ef;
+margin: 30px 30px 30px 0;
+transition: .5s ease;
+animation: slideLeft 1s ease  forwards;
+opacity: 0;
+animation-delay: calc(.2s *var(--i));
+}
+#js:hover {
+color: #1f242d;
+border: solid rgb(255, 225, 0) 2px;
+box-shadow: 0 0 20px rgb(252, 244, 15);
+background: linear-gradient( #fff200, #f4bc24);
+}
+#html:hover {
+    color: #1f242d;
+    border: solid rgb(255, 94, 0) 2px;
+    box-shadow: 0 0 20px rgb(255, 89, 13);
+    background: linear-gradient(#f95c01, #bc5a14);
+}
+#css:hover {
+        color: #1f242d;
+        border: solid rgb(0, 26, 255) 2px;
+        box-shadow: 0 0 20px rgb(15, 78, 252);
+        background: linear-gradient( #0068c9, #0048fe);
+}
+#git:hover {
+    color: #1f242d;
+    border: solid rgb(255, 85, 0) 2px;
+    box-shadow: 0 0 20px rgb(251, 82, 15);
+    background: linear-gradient( #ff4400, #ff6912);
+}
+#json:hover {
+    color: #1f242d;
+    border: solid rgb(255, 162, 0) 2px;
+    box-shadow: 0 0 20px rgb(252, 145, 15);
+    background: linear-gradient( #ffb300, #fb8a00);
+}
+#node:hover {
+    color: #1f242d;
+    border: solid rgb(132, 255, 0) 2px;
+    box-shadow: 0 0 20px rgb(146, 250, 0);
+    background: linear-gradient( #6dfb00, #a6ff01);
+}
+.about {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 10% 0;
+    display: flex;
+    flex-direction: column;
+}
+.aboutTxt {
+animation: zoomIn 5s ease  forwards, floatImage 4s ease-in-out infinite;
+font-size: 100px;
+color: #0ef;
+text-shadow: 0 0 20px #0ef;
+}
+.logo-img img {
+    max-width: 450px;
+    margin-right: -20px;
+    animation: zoomIn 1s ease  forwards, floatImage 4s ease-in-out infinite;
+    opacity: 0;
+    animation-delay: 2s, 3s;
+}
+.main-info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.main-info p {
+    opacity: 0;
+    margin-top: 100px;
+    width: 400px;
+    font-size: 30px;
+    animation: slideLeft 2s ease  forwards;
+}
+.main-info ul {
+    opacity: 0;
+    margin-top: 100px;
+    width: 400px;
+    font-size: 30px;
+    animation: slideRight 5s ease  forwards;
+}
